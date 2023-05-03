@@ -1,0 +1,26 @@
+import './App.css';
+import QuizState from './context/QuizState';
+import Home from './pages/Home/Home';
+import {
+  Routes,
+  Route
+} from "react-router-dom";
+import ReviewAnswer from './pages/Review/ReviewAnswer';
+
+function App() {
+
+  return (
+    <>
+      <QuizState>
+        <div className="App">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/review" element={<ReviewAnswer />} />
+          </Routes>
+        </div>
+      </QuizState>
+    </>
+  );
+}
+
+export default App;
